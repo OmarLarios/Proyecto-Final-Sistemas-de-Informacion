@@ -9,16 +9,12 @@
   </head>
 <body>
   <h1 class="text-center p-3">Sistema de registro de alumnos</h1>
-  <script>
-    function eliminar(){
-      let respuesta=confirm("Estas seguro de eliminar?");
-      return respuesta;
-    }
-  </script>
+  
 <?php
   include "modelo/conexion.php";
   include "controlador/eliminarAlu.php";
 ?>
+
 <div class="container-fluid row text-center">
   <form class="col-4 p-3" method="POST">
       <h3 class="text-center text-secondary">Registro de alumnos</h3>
@@ -80,7 +76,7 @@
             <td><?= $datos->correo  ?></td>
             <td>
               <a href="modificarAlu.php?numCta=<?= $datos-> numCta  ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-              <a onclick="return eliminar()" href="index.php?id=<?= $datos-> numCta  ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
+              <a href="index.php?id=<?= $datos-> numCta  ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
             </td>
           </tr>
       <?php }

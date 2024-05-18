@@ -2,11 +2,11 @@
     if(!empty($_POST["registrar"])){
         if(!empty($_POST["nombre"])and !empty($_POST["apellido"]) and !empty($_POST["numCta"]) and !empty($_POST["carrera"]) and !empty($_POST["semestre"]) and !empty($_POST["correo"])){
             $nombre=$_POST["nombre"];
-            $nombre=$_POST["apellido"];
-            $nombre=$_POST["numCta"];
-            $nombre=$_POST["carrera"];
-            $nombre=$_POST["semestre"];
-            $nombre=$_POST["correo"];
+            $apellido=$_POST["apellido"];
+            $numCta=$_POST["numCta"];
+            $carrera=$_POST["carrera"];
+            $semestre=$_POST["semestre"];
+            $correo=$_POST["correo"];
 
             $sql=$conexion->query("insert into alumnos(nombre, apellido, noCta, carrera, semestre, correo)values('$nombre','$apellido','$numCta','$carrera','$semestre','$correo')");
             if($sql==1){

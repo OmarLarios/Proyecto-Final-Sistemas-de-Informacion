@@ -15,11 +15,10 @@
       return respuesta;
     }
   </script>
-<?php //conexion
-  include "modelo/conexion.php";
+<?php
+  include "conexion.php";
   include "controlador/eliminarAlu.php";
 ?>
-
 <div class="container-fluid row text-center">
   <form class="col-4 p-3" method="POST">
       <h3 class="text-center text-secondary">Registro de alumnos</h3>
@@ -53,8 +52,9 @@
 
       <button type="submit" class="btn btn-primary" name="registrar" value="ok">Registrar</button>
   </form>
+</div>
 
-  <div class="col-8 p-4">
+<div class="col-8 p-4">
   <table class="table">
     <thead class="bg-info">
       <tr>
@@ -69,7 +69,7 @@
     </thead>
     <tbody>
       <?php 
-        include "modelo/conexion.php";
+        include "conexion.php";
         $sql=$conexion->query(" select * from Alumnos");
         while($datos=$sql->fetch_object()){?>
           <tr>
@@ -86,10 +86,9 @@
           </tr>
       <?php }
       ?>
+ 
     </tbody>
   </table>
-</div>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

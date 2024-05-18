@@ -18,7 +18,7 @@
   include "controlador/eliminarAlu.php";
   ?>
 
-  <div class="container-fluid row text-center">
+  <div class="container-fluid row">
     <form class="col-4 p-3" method="POST">
       <h3 class="text-center text-secondary">Registro de alumnos</h3>
       <?php
